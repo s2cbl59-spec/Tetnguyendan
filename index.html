@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tết Bính Ngọ 2026 - Website Hoàn Chỉnh</title>
+    <meta name="description" content="Chào mừng Tết Bính Ngọ 2026 — lịch, phong tục, công thức món ăn và lời chúc Tết." />
+    <meta property="og:title" content="Tết Bính Ngọ 2026" />
+    <meta property="og:description" content="Khám phá lịch Tết, phong tục, món ăn truyền thống và gửi lời chúc may mắn." />
+    <meta property="og:image" content="https://source.unsplash.com/featured/?tet,vietnam" />
+    <meta name="theme-color" content="#ffebee" />
+    <style>
+        :root{
+            --primary:#d32f2f;
+            --primary-dark:#b71c1c;
+            --bg1:#ffcccc;
+            --bg2:#ffffcc;
+            --text:#333;
+            --max-width:1000px;
+        }
+        html,body{height:100%;}
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, var(--bg1), var(--bg2));
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            min-height:100%;
+        }
+        a.skip-link{
+            position: absolute;
+            left: -999px;
+            top: -999px;
+        }
+        a.skip-link:focus{
+            left: 1rem;
+            top: 1rem;
+            background: #fff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            z-index: 200;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        nav {
+            background-color: var(--primary);
+            padding: 12px 8px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul{list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap;}
+        nav li{margin:4px 12px;}
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 6px 8px;
+            border-radius: 4px;
+            display:inline-block;
+        }
+        nav a[aria-current="true"]{
+            outline: 2px solid rgba(255,255,255,0.25);
+            background: rgba(0,0,0,0.08);
+        }
+        nav a:focus { box-shadow: 0 0 0 3px rgba(255,255,255,0.12); }
+        .container{max-width:var(--max-width); margin: 0 auto; padding: 18px;}
+        .section {
+            display: none;
+            padding: 18px 20px;
+        }
+        .section.active {
+            display: block;
+        }
+        header{padding:8px 0;}
+        img.responsive {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 12px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+            text-align:center;
+        }
+        .firework {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ffeb3b;
+            border-radius: 50%;
+            animation: explode 2.5s infinite;
+            pointer-events: none;
+        }
+        @keyframes explode {
+            0% { transform: scale(0); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.6; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width:800px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid var(--primary);
+            text-align: center;
+        }
+        th {
+            background: var(--primary);
+            color: white;
+        }
+        input[type="text"], button {
+            padding: 10px;
+            margin: 10px 6px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover { background: var(--primary-dark); }
+        @media (max-width: 600px) {
+            nav ul{flex-direction:column; align-items:center;}
+            nav li{margin:6px 0;}
+            .container{padding:12px;}
+        }
+        /* Respect users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .firework, * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Bỏ qua sang nội dung chính</a>
+
+    <nav role="navigation" aria-label="Chuyển hướng chính">
+        <ul>
+            <li><a href="#home" data-target="home" aria-current="true">Trang Chủ</a></li>
+            <li><a href="#lich" data-target="lich">Lịch Tết</a></li>
+            <li><a href="#truyen-thong" data-target="truyen-thong">Truyền Thống</a></li>
+            <li><a href="#cong-thuc" data-target="cong-thuc">Công Thức</a></li>
+            <li><a href="#chuc-mung" data-target="chuc-mung">Lời Chúc</a></li>
+        </ul>
+    </nav>
+
+    <main id="main" class="container" tabindex="-1">
+        <!-- Trang Chủ -->
+        <section id="home" class="section active" aria-labelledby="home-heading">
+            <header>
+                <h1 id="home-heading">Chào Mừng Tết Bính Ngọ 2026!</h1>
+                <p>Khám phá lịch Tết, phong tục, món ăn truyền thống và gửi lời chúc may mắn cho năm Ngựa mạnh mẽ!</p>
+            </header>
+
+            <figure>
+                <img class="responsive" loading="lazy"
+                     src="https://source.unsplash.com/1200x600/?tet,vietnam,fireworks"
+                     alt="Pháo hoa chúc mừng năm mới tại Việt Nam" />
+                <figcaption style="font-size:0.9rem; color:#555;">Pháo hoa chúc mừng năm mới (hình minh họa)</figcaption>
+            </figure>
+
+            <h2>Còn bao lâu nữa đến Tết Bính Ngọ?</h2>
+            <p id="countdown" style="font-size: 22px; color: var(--primary); font-weight: bold;" aria-live="polite"></p>
+
+            <section aria-label="Giới thiệu">
+                <h2>Giới Thiệu</h2>
+                <p style="max-width:800px; margin:0 auto; text-align:left;">Tết Nguyên Đán là lễ hội lớn nhất của dân tộc Việt Nam, đánh dấu sự khởi đầu năm mới theo âm lịch. Năm 2026 là năm <strong>Bính Ngọ</strong> (con Ngựa), tượng trưng cho sự mạnh mẽ, tự do, năng động và tốc độ. Tết năm nay rơi vào <strong>17/02/2026</strong> (mùng 1 Tết âm lịch), giao thừa là <strong>16/02/2026</strong>.</p>
+
+                <p style="margin-top:0.5rem;">Âm thanh Tết (hợp lệ với quyền người dùng):</p>
+                <audio controls aria-label="Nhạc Tết" preload="none">
+                    <source src="https://example.com/nhac-tet-vui.mp3" type="audio/mpeg" />
+                    Trình duyệt không hỗ trợ âm thanh.
+                </audio>
+            </section>
+        </section>
+
+        <!-- Lịch Tết -->
+        <section id="lich" class="section" aria-labelledby="lich-heading">
+            <header><h1 id="lich-heading">Lịch Tết Nguyên Đán 2026</h1></header>
+            <p><strong>Tết 2026 (Bính Ngọ - Con Ngựa)</strong>: Mùng 1 tháng Giêng âm lịch rơi vào Thứ Ba, ngày 17/02/2026 dương lịch. Giao thừa: 16/02/2026.</p>
+
+            <table role="table" aria-label="Lịch âm dương">
+                <thead>
+                    <tr><th>Năm</th><th>Ngày Dương Lịch (Mùng 1 Tết)</th><th>Con Giáp</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>2026</td><td>17/02 (Thứ Ba)</td><td>Ngựa (Bính Ngọ)</td></tr>
+                    <tr><td>2027</td><td>06/02</td><td>Dê (Đinh Mùi)</td></tr>
+                    <tr><td>2028</td><td>26/01</td><td>Khỉ (Mậu Thân)</td></tr>
+                </tbody>
+            </table>
+
+            <p>Lịch nghỉ Tết chính thức (công chức, viên chức): Thường 9 ngày (bao gồm cuối tuần), từ khoảng 14/02 đến 22/02/2026 – chờ thông báo chính thức từ Chính phủ.</p>
+
+            <figure>
+                <img class="responsive" loading="lazy"
+                     src="https://source.unsplash.com/1200x600/?calendar,tet"
+                     alt="Lịch Tết 2026 minh họa" />
+            </figure>
+        </section>
+
+        <!-- Truyền Thống -->
+        <section id="truyen-thong" class="section" aria-labelledby="pt-heading">
+            <header><h1 id="pt-heading">Phong Tục Truyền Thống Tết Việt Nam</h1></header>
+            <section>
+                <ul style="list-style: none; padding: 0; text-align: left; max-width: 700px; margin: auto;">
+                    <li><strong>Dọn dẹp nhà cửa (trước 23 tháng Chạp)</strong>: Loại bỏ bụi bẩn, xua đuổi điều xui xẻo, đón may mắn.</li>
+                    <li><strong>Cúng ông Công ông Táo (23 tháng Chạp)</strong>: Tiễn Táo Quân về trời báo cáo việc nhà.</li>
+                    <li><strong>Thăm mộ tổ tiên</strong>: Dọn mộ phần, mời ông bà về ăn Tết.</li>
+                    <li><strong>Gói bánh chưng/bánh tét</strong>: Biểu tượng đất trời, sum vầy gia đình.</li>
+                    <li><strong>Chưng hoa Tết</strong>: Hoa đào miền Bắc, hoa mai miền Nam, cây quất.</li>
+                    <li><strong>Mâm ngũ quả</strong>: Cầu mong ngũ phúc (phúc, lộc, thọ, khang, ninh).</li>
+                    <li><strong>Cúng giao thừa & tất niên</strong>: Tạ ơn tổ tiên, đón năm mới.</li>
+                    <li><strong>Xông đất/mừng tuổi/lì xì</strong>: Người đầu tiên bước vào nhà mang may mắn.</li>
+                    <li><strong>Đi chùa đầu năm, hái lộc</strong>: Cầu bình an, may mắn.</li>
+                </ul>
+
+                <figure>
+                    <img class="responsive" loading="lazy"
+                         src="https://source.unsplash.com/1200x600/?vietnam,tet,tradition"
+                         alt="Phong tục Tết Việt Nam" />
+                </figure>
+            </section>
+        </section>
+
+        <!-- Công Thức -->
+        <section id="cong-thuc" class="section" aria-labelledby="ct-heading">
+            <header><h1 id="ct-heading">Công Thức Món Ăn Truyền Thống Tết</h1></header>
+            <article>
+                <h2>Bánh Chưng Lá Dong (Miền Bắc)</h2>
+                <p><strong>Nguyên liệu (4-5 bánh)</strong>: 2kg gạo nếp, 500g đậu xanh, 1kg thịt lợn ba chỉ, lá dong, lạt tre, hành, tiêu, muối.</p>
+                <ol style="text-align: left; max-width: 700px; margin: auto;">
+                    <li>Ngâm gạo nếp 8-10 tiếng, vo sạch. Đậu xanh ngâm mềm, hấp chín, giã nhuyễn.</li>
+                    <li>Thịt ướp hành, tiêu, muối; lá dong rửa sạch, lau khô.</li>
+                    <li>Gói: Lót 2 lớp lá dong, xếp gạo → đậu → thịt → đậu → gạo. Buộc chặt bằng lạt.</li>
+                    <li>Luộc trong nồi lớn 8-10 tiếng (thêm nước nóng khi cạn). Để nguội, treo nơi thoáng.</li>
+                </ol>
+
+                <figure>
+                    <img class="responsive" loading="lazy"
+                         src="https://source.unsplash.com/1200x600/?banh-chung"
+                         alt="Bánh chưng truyền thống" />
+                </figure>
+
+                <h2>Thịt Kho Tàu (Miền Nam - Kho Hột Vịt)</h2>
+                <p><strong>Nguyên liệu</strong>: 1kg thịt ba chỉ, 6-8 quả trứng vịt/gà, 1 lít nước dừa tươi, nước mắm, đường, hành tím, tỏi, tiêu.</p>
+                <ol style="text-align: left; max-width: 700px; margin: auto;">
+                    <li>Thịt cắt miếng vừa ăn, ướp nước mắm, đường, tiêu, hành tỏi băm 30-60 phút.</li>
+                    <li>Thắng đường tạo màu cánh gián. Cho thịt vào xào săn.</li>
+                    <li>Đổ nước dừa ngập mặt, kho lửa nhỏ 1-1.5 tiếng. Thêm trứng luộc bóc vỏ vào kho tiếp 20-30 phút.</li>
+                    <li>Nêm nếm vừa miệng, kho đến khi nước sánh lại.</li>
+                </ol>
+            </article>
+        </section>
+
+        <!-- Lời Chúc -->
+        <section id="chuc-mung" class="section" aria-labelledby="lc-heading">
+            <header><h1 id="lc-heading">Lời Chúc Tết Bính Ngọ 2026</h1></header>
+            <div>
+                <p>Nhập tên để nhận lời chúc cá nhân hóa:</p>
+                <label for="name" class="visually-hidden">Tên của bạn</label>
+                <input type="text" id="name" placeholder="Tên của bạn" aria-label="Tên của bạn" />
+                <button id="generateBtn">Tạo Lời Chúc</button>
+                <p id="wishOutput" style="font-size: 20px; color: var(--primary); min-height: 60px;" aria-live="polite"></p>
+
+                <figure>
+                    <img class="responsive" loading="lazy"
+                         src="https://source.unsplash.com/1200x600/?spring,celebration"
+                         alt="Gia đình sum vầy ngày Tết" />
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Website Tết Bính Ngọ. Chúc mọi người năm mới mạnh khỏe, phát tài như ngựa phi! 🐎🎆 Liên hệ: example@email.com</p>
+    </footer>
+
+    <script>
+        (function(){
+            // Navigation: use hash + ARIA
+            const navLinks = document.querySelectorAll('nav a[data-target]');
+            const sections = document.querySelectorAll('.section');
+
+            function showSectionById(id, setFocus=true){
+                sections.forEach(s => {
+                    const isActive = s.id === id;
+                    s.classList.toggle('active', isActive);
+                    s.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+                });
+                navLinks.forEach(a => {
+                    a.setAttribute('aria-current', a.dataset.target === id ? 'true' : 'false');
+                });
+                if (setFocus) {
+                    const main = document.getElementById('main');
+                    main.focus();
+                }
+            }
+
+            navLinks.forEach(a => {
+                a.addEventListener('click', function(e){
+                    e.preventDefault();
+                    const id = this.dataset.target;
+                    history.pushState(null, '', '#'+id);
+                    showSectionById(id);
+                });
+            });
+
+            window.addEventListener('hashchange', () => {
+                const id = location.hash ? location.hash.substring(1) : 'home';
+                showSectionById(id);
+            });
+
+            // On load: open section by hash
+            document.addEventListener('DOMContentLoaded', () => {
+                const id = location.hash ? location.hash.substring(1) : 'home';
+                showSectionById(id, false);
+            });
+
+            // Wish generator
+            const wishes = [
+                (name)=>`Chúc ${name} năm Bính Ngọ phi như ngựa, tiền vô như nước, sức khỏe dồi dào! 🐎`,
+                (name)=>`Năm mới 2026 chúc ${name} công việc thuận lợi, gia đình hạnh phúc, vạn sự như ý! 🎉`,
+                (name)=>`Chúc ${name} tuổi Ngọ mạnh mẽ, vượt mọi khó khăn, tài lộc đầy nhà! 💰`,
+                (name)=>`Năm Ngựa đến – chúc ${name} bứt phá thành công, tình duyên viên mãn! ❤️`,
+                (name)=>`Chúc ${name} và gia đình sum vầy, ăn Tết vui vẻ, năm mới an khang thịnh vượng! 🏡`
+            ];
+            document.getElementById('generateBtn').addEventListener('click', () => {
+                const raw = document.getElementById('name').value.trim();
+                const name = raw || 'bạn';
+                const randomWish = wishes[Math.floor(Math.random()*wishes.length)](name);
+                document.getElementById('wishOutput').innerText = randomWish;
+            });
+
+            // Countdown (update every second)
+            // Target: 2026-02-17 at local Vietnam timezone (+07:00). Use an explicit offset string.
+            const tet = new Date("2026-02-17T00:00:00+07:00");
+            const countdownEl = document.getElementById('countdown');
+
+            function updateCountdown(){
+                const now = new Date();
+                let diff = tet - now;
+                if (diff <= 0) {
+                    countdownEl.innerText = "Tết Bính Ngọ đã đến rồi! Chúc mừng năm mới! 🎊";
+                    return;
+                }
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                diff -= days * (1000 * 60 * 60 * 24);
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                diff -= hours * (1000 * 60 * 60);
+                const minutes = Math.floor(diff / (1000 * 60));
+                diff -= minutes * (1000 * 60);
+                const seconds = Math.floor(diff / 1000);
+
+                countdownEl.innerText = `Còn ${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây nữa là Tết! 🐎`;
+            }
+            // Start immediately and update each second
+            updateCountdown();
+            const countdownTimer = setInterval(() => {
+                updateCountdown();
+                if (new Date() >= tet) clearInterval(countdownTimer);
+            }, 1000);
+
+            // Fireworks: respectful defaults (off for reduced-motion or save-data)
+            const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            const saveData = connection && connection.saveData;
+
+            if (!prefersReduced && !saveData) {
+                let activeFireworks = 0;
+                const maxActive = 6;
+                function createFirework(){
+                    if (activeFireworks >= maxActive) return;
+                    const fw = document.createElement('div');
+                    fw.className = 'firework';
+                    const left = Math.random() * 90 + 5; // vw
+                    const top = Math.random() * 70 + 5; // vh
+                    fw.style.left = left + 'vw';
+                    fw.style.top = top + 'vh';
+                    document.body.appendChild(fw);
+                    activeFireworks++;
+                    setTimeout(() => {
+                        fw.remove();
+                        activeFireworks--;
+                    }, 2500);
+                }
+                // fewer fireworks to reduce CPU & battery use
+                setInterval(createFirework, 1200);
+            }
+
+            // Improve keyboard visibility for visually-hidden label used earlier
+            const style = document.createElement('style');
+            style.innerHTML = ".visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}";
+            document.head.appendChild(style);
+
+        })();
+    </script>
+</body>
+</html>
