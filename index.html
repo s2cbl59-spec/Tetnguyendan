@@ -1,5 +1,794 @@
 <!DOCTYPE html>
+<html lang="vi"><!DOCTYPE html>
 <html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tết bính ngọ - Ất Tỵ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --red-tet: #C81E1E;
+            --gold-tet: #FACC15;
+            --green-tet: #16A34A;
+            --bg-light: #FFF7ED;
+            --bg-dark: #7F1D1D;
+            --heading: #7C2D12;
+            --text: #374151;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--bg-light);
+            overflow-x: hidden;
+            transition: background 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: var(--bg-dark);
+            color: #FFF7ED;
+        }
+
+        body.dark-mode .header {
+            background: rgba(127, 29, 29, 0.95);
+        }
+
+        body.dark-mode .card, body.dark-mode .greeting-card {
+            background: rgba(200, 30, 30, 0.2);
+            border-color: var(--gold-tet);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 247, 237, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(200, 30, 30, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tết Nguyên Đán 2026 - Bính Ngọ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --red-primary: #C81E1E;
+            --gold-primary: #FACC15;
+            --green-accent: #16A34A;
+            --bg-light: #FFF7ED;
+            --bg-dark: #7F1D1D;
+            --heading-color: #7C2D12;
+            --text-color: #374151;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background: var(--bg-light);
+            overflow-x: hidden;
+            transition: var(--transition);
+        }
+
+        body.dark-mode {
+            --bg-light: #1a0f0f;
+            --text-color: #f5f5f5;
+            --heading-color: #FACC15;
+            background: var(--bg-dark);
+        }
+
+        /* Canvas for falling flowers */
+        #petalCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Countdown in Hero */
+        .countdown-hero {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            color: white;
+            padding: 1.2rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            margin: 2rem auto 0;
+            max-width: 700px;
+            border: 1px solid rgba(250, 204, 21, 0.4);
+        }
+
+        .countdown-hero h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            margin-bottom: 0.6rem;
+            color: var(--gold-primary);
+        }
+
+        .countdown-hero p.date-info {
+            font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .timer {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(200, 30, 30, 0.1);
+            transition: var(--transition);
+        }
+
+        body.dark-mode header {
+            background: rgba(127, 29, 29, 0.95);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--red-primary);
+            font-weight: 700;
+        }
+
+        body.dark-mode .logo {
+            color: var(--gold-primary);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--red-tet);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--heading);
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        body.dark-mode .nav-links a {
+            color: var(--gold-tet);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-tet);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            background: var(--red-tet);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--heading);
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--red-tet) 0%, var(--gold-tet) 100%);
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: #FFF7ED;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--red-tet);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--heading);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        body.dark-mode .section-title {
+            color: var(--gold-tet);
+        }
+
+        .section-title::after {
+            content: '🎋';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--gold-tet);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(200, 30, 30, 0.2);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--red-tet);
+            margin-bottom: 1rem;
+        }
+
+        body.dark-mode .card h3 {
+            color: var(--gold-tet);
+        }
+
+        /* Greetings */
+        .greeting-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--gold-tet);
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .greeting-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            color: var(--red-tet);
+            font-weight: 500;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--gold-tet);
+        }
+
+        .random-btn {
+            background: var(--red-tet);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .random-btn:hover {
+            background: var(--heading);
+            transform: scale(1.05);
+        }
+
+        /* Li Xi Game */
+        .lixi-game {
+            background: linear-gradient(135deg, var(--red-tet) 0%, #dc2626 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+        }
+
+        .lixi-envelope {
+            font-size: 5rem;
+            margin: 2rem 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .lixi-envelope:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .lixi-result {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin: 1rem 0;
+            min-height: 60px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--heading);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a {
+            color: var(--gold-tet);
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--red-tet);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-top:hover {
+            background: var(--heading);
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Particles */
+        .particle {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-spa"></i>
+                Tết 2025
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Ý nghĩa</a></li>
+                <li><a href="#customs">Phong tục</a></li>
+                <li><a href="#greetings">Lời chúc</a></li>
+                <li><a href="#lixi">Lì xì</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Chúc Mừng Năm Mới 2025</h1>
+            <p>An Khang - Thịnh Vượng - Vạn Sự Như Ý</p>
+            <button class="cta-button" onclick="scrollToSection('customs')">
+                Khám phá phong tục Tết <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">Ý Nghĩa Tết Nguyên Đán</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">🎋</div>
+                <h3>Nguồn Gốc</h3>
+                <p>Tết Nguyên Đán là dịp lễ quan trọng nhất trong năm của người Việt, đánh dấu sự chuyển giao giữa năm cũ và năm mới theo âm lịch.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏮</div>
+                <h3>Ý Nghĩa</h3>
+                <p>Tết là dịp sum họp gia đình, tri ân tổ tiên, cầu mong một năm mới bình an, hạnh phúc và thịnh vượng.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎊</div>
+                <h3>Truyền Thống</h3>
+                <p>Những phong tục như gói bánh chưng, mua hoa, dọn nhà đã gắn bó với người Việt qua nhiều thế hệ.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customs Section -->
+    <section id="customs">
+        <h2 class="section-title">Phong Tục Ngày Tết</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">🎂</div>
+                <h3>Gói Bánh Chưng</h3>
+                <p>Bánh chưng vuông tượng trưng cho đất, thể hiện lòng biết ơn với trời đất và tổ tiên.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🙏</div>
+                <h3>Chúc Tết</h3>
+                <p>Đi chúc Tết người thân, bạn bè là dịp gửi gắm những lời chúc tốt đẹp nhất.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧧</div>
+                <h3>Mừng Tuổi</h3>
+                <p>Lì xì là món quà may mắn từ người lớn tuổi trao cho trẻ em và người trẻ.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧹</div>
+                <h3>Dọn Nhà</h3>
+                <p>Tổng vệ sinh nhà cửa để đón năm mới tươi sáng, xua đi điều xui xẻo.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌸</div>
+                <h3>Mua Hoa</h3>
+                <p>Hoa mai miền Nam, hoa đào miền Bắc tượng trưng cho sự thịnh vượng và tài lộc.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🍊</div>
+                <h3>Mâm Ngũ Quả</h3>
+                <p>Năm loại trái cây tượng trưng cho ngũ hành và lòng thành kính với tổ tiên.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Greetings Section -->
+    <section id="greetings">
+        <h2 class="section-title">Lời Chúc Tết Hay</h2>
+        <div class="greeting-container">
+            <div class="greeting-card" id="greetingText">
+                Nhấn nút để nhận lời chúc Tết! 🎊
+            </div>
+            <button class="random-btn" onclick="randomGreeting()">
+                <i class="fas fa-random"></i> Tạo lời chúc mới
+            </button>
+        </div>
+    </section>
+
+    <!-- Li Xi Game -->
+    <section id="lixi">
+        <h2 class="section-title">Mini Game Lì Xì</h2>
+        <div class="lixi-game">
+            <h3>Nhấn vào phong bì để nhận lì xì!</h3>
+            <div class="lixi-envelope" onclick="openLixi()">🧧</div>
+            <div class="lixi-result" id="lixiResult"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>Chúc Quý Khách Một Năm Mới Tràn Đầy Niềm Vui</h3>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2025 Website Tết Việt Nam. Mọi quyền được bảo lưu.</p>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Greetings Data
+        const greetings = [
+            "Xuân về vạn sự như ý, An khang thịnh vượng cả năm!",
+            "Chúc năm mới tràn đầy sức khỏe, hạnh phúc và thành công!",
+            "Vạn sự như ý, Tâm tưởng sự thành!",
+            "Phát tài phát lộc, An khang thịnh vượng!",
+            "Năm mới dồi dào sức khỏe, tràn đầy niềm vui!",
+            "Tiền vào như nước, Tình yêu như mật!",
+            "Cung chúc tân xuân, Vạn sự cát tường!",
+            "Năm mới thắng lợi, Sự nghiệp hanh thông!",
+            "Sức khỏe dồi dào, Tài lộc đầy nhà!",
+            "Gia đình hạnh phúc, Con cháu hiền lành!"
+        ];
+
+        // Li Xi Data
+        const lixiAmounts = [
+            { amount: "50.000đ", message: "Chúc bạn may mắn!" },
+            { amount: "100.000đ", message: "Phát tài phát lộc!" },
+            { amount: "200.000đ", message: "Tài lộc dồi dào!" },
+            { amount: "500.000đ", message: "Vạn sự như ý!" },
+            { amount: "1.000.000đ", message: "Đại cát đại lợi!" }
+        ];
+
+        // Theme Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = document.body.classList.contains('dark-mode') 
+                ? 'fas fa-sun' 
+                : 'fas fa-moon';
+        }
+
+        // Random Greeting
+        function randomGreeting() {
+            const text = greetings[Math.floor(Math.random() * greetings.length)];
+            const element = document.getElementById('greetingText');
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.textContent = text;
+                element.style.transition = 'opacity 0.5s ease';
+                element.style.opacity = '1';
+            }, 300);
+        }
+
+        // Li Xi Game
+        let lixiClicked = false;
+        function openLixi() {
+            const envelope = document.querySelector('.lixi-envelope');
+            const result = document.getElementById('lixiResult');
+            
+            envelope.style.transform = 'scale(1.2) rotate(360deg)';
+            setTimeout(() => {
+                envelope.style.transform = 'scale(1) rotate(0deg)';
+                const lixi = lixiAmounts[Math.floor(Math.random() * lixiAmounts.length)];
+                result.innerHTML = `
+                    <div style="animation: fadeInUp 0.5s ease;">
+                        💰 ${lixi.amount}<br>
+                        <span style="font-size: 1.2rem;">${lixi.message}</span>
+                    </div>
+                `;
+            }, 500);
+        }
+
+        // Scroll to Section
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/Hide Scroll to Top Button
+        window.addEventListener('scroll', () => {
+            const scrollBtn = document.querySelector('.scroll-top');
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        // Create Falling Particles
+        function createParticle() {
+            const particles = ['🌸', '🎋', '🏮', '🎊', '✨'];
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.textContent = particles[Math.floor(Math.random() * particles.length)];
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            particle.style.opacity = Math.random() * 0.5 + 0.3;
+            document.querySelector('.hero').appendChild(particle);
+            
+            setTimeout(() => particle.remove(), 8000);
+        }
+
+        // Generate particles periodically
+        setInterval(createParticle, 800);
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = link.getAttribute('href').substring(1);
+                scrollToSection(target);
+            });
+        });
+    </script>
+</body>
+</html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
